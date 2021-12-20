@@ -13,6 +13,7 @@ $--item-height: 28px;
 $--item-font-size: 0.8rem;
 
 $--item-expanded-bg: #4b4b4b;
+$--item-expanded-toggle: #bbbbbb;
 
 .va-timeline-component {
   display: flex;
@@ -41,6 +42,7 @@ $--item-expanded-bg: #4b4b4b;
     color: $--item-color;
     background-color: $--item-bg;
     border-bottom: 1px solid $--border-color-base;
+    position: relative;
 
     .text {
       font-size: $--item-font-size;
@@ -136,6 +138,7 @@ $--item-expanded-bg: #4b4b4b;
   &__item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     height: $--item-height;
     color: $--item-color;
@@ -156,6 +159,21 @@ $--item-expanded-bg: #4b4b4b;
       &:active {
         cursor: grabbing;
       }
+    }
+  }
+  &__toggle {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+    transition-duration: 300ms;
+    color: $--item-expanded-toggle;
+    user-select: none;
+    cursor: pointer;
+
+    &.va__active {
+      transform: translate(-50%, -50%) scale(0.6) rotate(180deg);
     }
   }
 }
