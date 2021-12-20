@@ -68,7 +68,7 @@ export default defineComponent({
     },
   },
   emits: ["update:modelValue"],
-  setup(props, { emit }) {
+  setup(_props, { emit }) {
     const isDragging = ref(false);
     const dragOptions = computed(() => ({
       animation: 200,
@@ -166,3 +166,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss" src="@/styles/main.scss"></style>
+<style lang="scss" src="@/styles/draggable.scss"></style>
+<style lang="css" src="@/styles/icons/style.css"></style>

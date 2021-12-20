@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useTimeline } from "../useTimeline";
+import { useTimeline } from "../use/useTimeline";
 
 export default defineComponent({
   props: {

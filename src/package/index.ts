@@ -1,4 +1,4 @@
-import VueAnimationTimeline from "./timeline.vue";
+import VueAnimationTimeline from "./vue-timeline-animation.vue";
 
 export { VueAnimationTimeline };
 
